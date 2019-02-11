@@ -44,7 +44,7 @@ react-verification-task\tabernam> npm start
 
 ## Description:
 
-###Server side
+### Server side
 Server has an endpoint `/products`, that could be found in following directory:
 ```
 react-verification-task\routes\products.js
@@ -57,7 +57,7 @@ Each product is a data set, that includes following attributes:
 
 `http://jsonplaceholder.typicode.com/` is used as one of the REST APIs
 
-###Client Side
+### Client Side
 Following files are using `redux` and `axios` for connecting data and data-template for one logical unit:
 * `react-verification-task\tabernam\store.js`
 * `react-verification-task\tabernam\reducers\index.js`
