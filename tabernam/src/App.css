@@ -1,0 +1,318 @@
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Verdana, sans-serif;
+  margin:0;
+  padding: 0;
+  height: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#root{
+  position: relative;
+  height: 100%;
+}
+
+.container{
+  position: relative;
+  height: 100vh;
+  z-index: 0;
+}
+
+.custom-jmb{
+  background: #555555;
+  color: #DDDDDD;
+}
+
+/*
+================================================================
+                      Navigation
+================================================================
+*/
+
+.nav-list{
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+  width: 1140px;
+  z-index: 1;
+  position: fixed;
+  font-size: 1.5rem;
+}
+
+.nav-list li{
+  margin: 0 15px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.nav-link{
+  color: #333333;
+}
+
+.nav-link:hover{
+  color: #DDDDDD;
+}
+
+.nav-list li:hover{
+  /*padding: 5px 10px;*/
+  background-color: rgba(0,0,0, 0.3);
+  transition: all 0.5s ease-out;
+}
+.category-header{
+  color: #555555;
+  border-bottom: 2px solid #555;
+}
+
+/*
+================================================================
+                      ARTICLE
+================================================================
+*/
+
+.article-container div{
+  margin: 20px 0;
+}
+
+.article-header{
+  display: flex;
+}
+
+.article-header img{
+  flex:1;
+  height: 20vh;
+  border: 1px solid #555;
+  margin: 0 20px 0 0;
+}
+
+.article-header{
+  flex:2;
+}
+
+.article-body{}
+.article-footer{}
+
+/*
+================================================================
+                      Products List
+================================================================
+*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.hover-box-action{
+  height:auto;
+  display:inline-block;
+  position:relative;
+  transition:.3s;
+  margin:4px;
+}
+.hover-box-action img{
+  width:100%;
+  height:100%;
+  transition:.3s;
+  border-radius:4px;
+}
+
+.hover-box-action:hover img{
+  filter:blur(2px) brightness(60%);
+  cursor:pointer;
+}
+
+.hover-box-action :not(img){
+  position:absolute;
+  z-index:1;
+  top:30%;
+  width:100%;
+  text-align:center;
+  color:#fff;
+  opacity:0;
+  transition:.5s;
+  cursor:pointer;
+}
+
+.hover-box-action h3{
+  top:50%
+}
+
+.hover-box-action input{
+  top:70%;
+  width: 32%;
+  left: 34%;
+}
+
+.hover-box-action:hover :not(img){
+  opacity:1;
+}
+
+/*
+================================================================
+                      Comments
+================================================================
+*/
+
+.comment-body{
+  margin: 20px;
+  /*border: 1px solid #000;*/
+  padding: 10px;
+}
+
+.comment-head{
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-head img{
+  flex:1;
+  height:14vh;
+}
+
+.comment-credentials{
+  flex: 7;
+  line-height: 60px;
+}
+.comment-credentials div{
+  /*flex:1;*/
+
+}
+
+
+/*
+================================================================
+                      Footer
+================================================================
+*/
+
+.footer-header{
+  width:100%;
+  text-align:center;
+  border-bottom: 2px solid #555;
+  line-height:0.1em;
+  margin: 40px 0 20px;
+}
+
+.footer-title{
+  background:#fff;
+  padding:0 10px;
+  font-size: 1.5rem;
+}
+
+.footer-content{
+  display:flex;
+  flex-direction: row;
+}
+
+.content-links{
+  flex:1;
+  text-align: center;
+}
+
+.content-links ul{
+  list-style: none;
+}
+
+.content-social{
+  flex:2;
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.content-social a{
+  margin: 0 30px;
+  color: #555555;
+  transition: .5s;
+}
+
+.content-social a:hover{
+  color: #000000;
+}
+
+.content-links-option a{
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #555555;
+  transition: .5s;
+}
+.content-links-option a:hover{
+  color: #000000;
+}
+
+.footer-credentials{
+  text-align: center;
+}
+
+.footer-credentials div{
+  margin: 40px 0;
+}
+
+.gh-button a{
+  border: 2px solid #555;
+  padding: 10px;
+  text-decoration: none;
+  color: #555555;
+  /*font-weight: bold;*/
+  transition: .5s;
+}
+
+.gh-button a:hover{
+  color: #ffffff!important;
+  background: #555555;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-list{
+    display: none;
+  }
+
+  .article-header{
+    flex-direction: column;
+  }
+
+  .article-header img{
+    height: 50vh;
+    width:100%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .article-header img{
+    height: 35vh;
+    width:100%;
+  }
+
+  .content-social{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hover-box-action h2{
+    font-size: 1.5rem;
+  }
+
+  .hover-box-action h3{
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 470px) {
+
+  .hover-box-action h2{
+    font-size: 1rem;
+  }
+
+  .hover-box-action h3{
+    font-size: .6rem;
+  }
+}
+
+
